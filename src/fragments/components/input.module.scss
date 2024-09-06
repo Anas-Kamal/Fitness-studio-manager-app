@@ -1,0 +1,137 @@
+@import '../styles/variables';
+
+.wrapper {
+  input[type='time']::-webkit-calendar-picker-indicator {
+    background: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  position: relative;
+  font-family: 'Inter';
+  font-size: 14px;
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: none;
+  }
+}
+
+.input_wrapper {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 8px;
+
+  width: 100%;
+  padding: 8px 8px 8px 16px;
+
+  background: $white;
+  color: $gray-900;
+
+  border: 1px solid $primary;
+  border-radius: 3px;
+  height: 45px;
+  padding: 5px;
+
+  transition: all 0.3s linear;
+  font-feature-settings: 'tnum';
+
+  user-select: none;
+
+  &:not(.disabled):hover {
+    border-color: $gray-900;
+  }
+
+  input {
+    width: 80%;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    &:not([type='range']) {
+      touch-action: manipulation;
+    }
+
+    &::placeholder {
+      color: $gray-500;
+      font-size: 20px;
+    }
+  }
+}
+
+.label {
+  font-weight: 500;
+  line-height: 1.71;
+  letter-spacing: -0.01em;
+  color: $gray-900;
+
+  &>span {
+    color: $primary;
+  }
+}
+
+.caption {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: -0.01em;
+  color: $gray-400;
+}
+
+.focused {
+  border-color: $gray-900;
+}
+
+.disabled {
+  color: $gray-400;
+  background-color: $gray-50;
+
+  textarea,
+  input {
+    cursor: not-allowed;
+  }
+}
+
+.with_error {
+  color: $danger;
+}
+
+.allow_clear {
+  cursor: pointer;
+
+  transition: color 0.2s linear;
+  color: $gray-500;
+
+  &:hover {
+    color: $gray-700;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+  position: absolute;
+  left: 20px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}

@@ -1,0 +1,142 @@
+@import '../styles/variables';
+@import '../styles/typography.module';
+
+.wrapper {
+  position: relative;
+  user-select: none;
+
+  min-width: 100px;
+
+  .selectWrapper {
+    width: 100%;
+    display: flex;
+    height: 41px;
+
+    align-items: center;
+    justify-content: stretch;
+
+    background: $white;
+    width: 100%;
+
+    border: 1px solid $gray-200;
+    border-radius: 3px;
+    height: 45px;
+    padding: 5px;
+
+    transition: border 0.125s ease-in;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      border-color: $gray-900;
+
+      svg {
+        color: $gray-900;
+      }
+    }
+
+    &:disabled {
+      background-color: $gray-200;
+      color: $gray-900;
+      border-color: $gray-200;
+    }
+
+    .filterInput {
+      @extend .action;
+
+      border: none;
+      background: none;
+      outline: none;
+
+      flex: 1;
+      padding: 4px 12px;
+
+      text-align: left;
+      z-index: 5;
+    }
+
+    .multiValue {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4px;
+      padding-left: 6px;
+
+      & > span {
+        @extend .caption;
+        padding: 2px 6px;
+        background: $gray-200;
+        border-radius: 4px;
+        color: $gray-900;
+      }
+    }
+
+    & > svg {
+      color: $gray-200;
+    }
+  }
+
+  // Option dropdown styles
+  .options {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+
+    position: absolute;
+
+    top: 42px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+    justify-content: stretch;
+
+    padding: 12px 0;
+    margin: 0;
+
+    background: $white;
+    border: 1px solid $gray-100;
+    border-radius: 8px;
+
+    list-style: none;
+
+    z-index: 5000;
+
+    & > li > button {
+      @extend .action;
+
+      display: block;
+
+      padding: 6px 12px;
+      cursor: pointer;
+
+      color: $gray-600;
+
+      border: none;
+      background: none;
+
+      width: 100%;
+      text-align: left;
+
+      &:hover {
+        background: $gray-50;
+      }
+
+      &.active {
+        font-weight: 700;
+        color: $gray-900;
+      }
+    }
+  }
+}
+
+.selectContainer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}

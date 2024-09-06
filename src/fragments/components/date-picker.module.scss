@@ -1,0 +1,53 @@
+@import '../styles/variables';
+
+.wrapper {
+  background: $white;
+  color: $gray-900;
+  font-size: 13px !important;
+
+  width: 100%;
+  padding: 8px 8px 8px 16px;
+
+  border: 1px solid $gray-200;
+  border-radius: 3px;
+  height: 45px;
+  padding: 5px;
+
+  transition: all 0.3s;
+  font-feature-settings: 'tnum';
+
+  cursor: pointer;
+
+  &:not(:disabled):hover {
+    border-color: $gray-900;
+  }
+
+  &:not(:disabled):focus {
+    border-color: $gray-900;
+    outline: 0;
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-900;
+  }
+
+  &::placeholder {
+    color: $gray-500;
+  }
+
+
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}

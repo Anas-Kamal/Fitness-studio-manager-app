@@ -1,0 +1,145 @@
+@import '../styles/variables';
+@import '../styles/typography.module';
+$side-panel-width: 110px;
+
+$grid-width: 40px repeat(7, 1fr);
+
+$border-color: $gray-200;
+.headerWrapper {
+  display: flex;
+  padding-inline: 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-block: 1px solid $primary;
+  button {
+    background-color: #1385e61c;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    width: 150px;
+  }
+}
+// Styles
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding-inline: 10px;
+  height: calc(100vh - 80px);
+  border-radius: 24px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  user-select: none;
+  .headWrapper {
+    position: sticky;
+    background-color: $white;
+    top: 0;
+    z-index: 100;
+    .head {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      & > div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+    .header {
+      position: relative;
+      height: 20px;
+      display: grid;
+      grid-template-columns: $grid-width;
+      direction: rtl;
+      z-index: 1000;
+      .left {
+        width: $side-panel-width;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > button {
+          cursor: pointer;
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          border-radius: 50%;
+        }
+      }
+      .left {
+        border-left: none;
+      }
+      .date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: $white;
+        & > span:first-child {
+          color: $gray-900;
+          font-weight: 300;
+          font-size: 13px;
+        }
+      }
+      & > div {
+        border-left: 1px dashed $border-color;
+        &:first-child {
+          border: none !important;
+        }
+        &:last-child {
+          border-right: none;
+          border-left: none;
+        }
+      }
+    }
+  }
+  .time {
+    position: absolute;
+    right: 0;
+  }
+  .grid {
+    direction: rtl;
+
+    display: grid;
+    grid-template-columns: $grid-width;
+    .cell {
+      height: 50px;
+      border-bottom: 1px dashed $border-color;
+      border-left: 1px dashed $border-color;
+      &.left,
+      &.last {
+        border-bottom: none;
+      }
+      &.left.last {
+        visibility: hidden;
+      }
+      &.left {
+        border-left: none;
+      }
+      &.left {
+        width: 50px;
+        position: relative;
+        @extend .caption;
+        color: $gray-500;
+        font-weight: 500;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import '../styles/variables';
+@import '../styles/typography.module';
+
+.button {
+  @extend .action;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: auto;
+  padding: 8px 16px;
+
+  background: none;
+  border: 1px solid transparent;
+
+  white-space: nowrap;
+  font-weight: 500;
+
+  border-radius: 4px;
+
+  transition: color 0.225s ease-out, background 0.175s ease-in, border 0.175s ease-in;
+  user-select: none;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: $gray-50;
+    color: $gray-300;
+    cursor: not-allowed;
+  }
+
+  .preloader + svg {
+    display: none;
+  }
+
+  // Variants
+  &:not(:disabled):hover {
+    background: $gray-100;
+  }
+  .preloader {
+    color: $gray-900;
+  }
+
+  &.white {
+    color: $gray-900;
+    background: white;
+
+    .preloader {
+      color: $gray-900;
+    }
+
+    &:disabled {
+      color: $gray-300;
+    }
+
+    &:not(:disabled):hover {
+      background: $gray-200;
+    }
+  }
+
+  &.gray {
+    color: $gray-600;
+    background: #e0e0e0;
+
+    .preloader {
+      color: $gray-900;
+    }
+
+    &:disabled {
+      color: $gray-300;
+    }
+
+    &:not(:disabled):hover {
+      background: $gray-200;
+    }
+  }
+}
+.event {
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #241f1f;
+
+  &:not(:disabled):hover {
+    color: $white;
+    background: black;
+  }
+}

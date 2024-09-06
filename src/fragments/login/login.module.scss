@@ -1,0 +1,164 @@
+
+.wrapper {
+  display: flex;
+  width: 100%;
+
+  .firstScreen {
+    display: flex;
+    width: 100%;
+    
+    .trainerImg {
+      width: 50%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    &>div {
+      padding-inline: 120px;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 50%;
+
+      &>svg {
+        margin-top: 100px;
+        margin-left: auto;
+      }
+
+      &>span:nth-child(2) {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: auto;
+        padding-bottom: 20px;
+      }
+
+      &>div:nth-child(3) {
+        max-width: 600px;
+        margin-left: auto;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        input {
+          text-align: right;
+        }
+      }
+
+      &>button:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        background-color: #241f1f;
+        margin-inline: auto;
+        color: white;
+
+        border-radius: 12px;
+
+        margin-top: auto;
+        margin-bottom: 100px;
+
+        height: 45px;
+
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+  }
+
+  .secondScreen {
+    display: flex;
+    width: 100%;
+
+    img {
+      width: 50%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    &>div {
+      padding-inline: 30px;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 50%;
+
+      &>svg {
+        margin-top: 100px;
+        margin-left: auto;
+      }
+
+      &>span:nth-child(2) {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: auto;
+        padding-bottom: 20px;
+      }
+
+      &>div:nth-child(3) {
+        max-width: 600px;
+        margin-left: auto;
+        width: 100%;
+        display: flex;
+        gap: 25px;
+        justify-content: flex-end;
+
+        input {
+          text-align: right;
+        }
+      }
+
+      &>button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        background-color: #241f1f;
+        color: white;
+        margin-inline: auto;
+
+        border-radius: 12px;
+
+        margin-top: auto;
+        margin-bottom: 100px;
+
+        height: 45px;
+
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.button-otp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: #241f1f;
+  color: white;
+  margin-inline: auto;
+
+  border-radius: 12px;
+
+  margin-top: auto;
+  margin-bottom: 100px;
+
+  height: 45px;
+
+  max-width: 500px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .trainerImg {
+    display: none !important;
+  }
+
+}

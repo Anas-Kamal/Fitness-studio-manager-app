@@ -1,0 +1,228 @@
+@import '../styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  section {
+    width: 100%;
+    min-height: calc(100vh - 164px);
+    display: flex;
+    flex-direction: row;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid $primary;
+
+    font-size: 22px;
+    font-weight: bold;
+    padding: 20px 20px 20px 0;
+  }
+
+  .table {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    min-height: 100%;
+    max-height: 1000px;
+    margin-right: 50px;
+    border: 1px solid $primary;
+    border-radius: 12px;
+    padding: 15px 30px;
+
+    & > div:first-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 100%;
+
+      & > div,
+      span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      & > span:last-child {
+        font-weight: bold;
+      }
+    }
+  }
+  .statistics {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    min-height: calc(100vh - 164px);
+    gap: 20px;
+
+    & > div:last-child {
+      max-width: 275px;
+      max-height: 350px;
+      justify-content: center;
+      align-items: center;
+
+      & > div {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        & > span {
+          position: relative;
+          color: #000 !important;
+
+          &::after {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            content: '';
+            right: -15px;
+            background-color: currentColor;
+            border-radius: 50%;
+            top: 50%;
+
+            transform: translateY(-45%);
+          }
+        }
+        .blue {
+          &::after {
+            background-color: #add3f4;
+          }
+        }
+        .gray {
+          &::after {
+            background-color: #cdcdcd;
+          }
+        }
+        .purple {
+          &::after {
+            background-color: #e4dbff;
+          }
+        }
+      }
+    }
+  }
+}
+.font {
+  font-weight: 300;
+}
+.fontBold {
+  font-weight: 700;
+  font-size: 16px;
+  color: $gray-900;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  max-width: 275px;
+
+  & > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    & > div:nth-child(2) {
+      width: 60%;
+
+      padding-block: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        @extend .fontBold;
+      }
+    }
+  }
+  & > div:nth-child(2) {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    & > span {
+      @extend .fontBold;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  & > div:nth-child(3) {
+    display: flex;
+    gap: 15px;
+  }
+}
+.activityBox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  & > span {
+    @extend .fontBold;
+    display: flex;
+    justify-content: flex-end;
+  }
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 50px;
+    background-color: $white;
+    padding: 25px 30px;
+    text-align: center;
+    & > span {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+.smallItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 3px;
+  background-color: #fafafa;
+  min-width: 50px;
+}
+
+.scheduleBox {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 4px;
+
+  & > div:nth-child(1) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @extend .fontBold;
+    padding-block: 10px;
+  }
+
+  .day {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+}

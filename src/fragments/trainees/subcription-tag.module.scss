@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 110px;
+  padding: 1px;
+  border-radius: 12px;
+}
+
+@mixin border($color) {
+  border: 1px solid $color;
+  color: $color;
+}
+.blue {
+  @include border($color: #1385e6);
+}
+
+.purple {
+  @include border($color: #7661ff);
+}

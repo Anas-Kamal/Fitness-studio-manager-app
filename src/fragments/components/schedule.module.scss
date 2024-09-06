@@ -1,0 +1,108 @@
+.header {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 10px;
+  font: normal normal bold 24px/35px Heebo;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+
+  input {
+    text-align: end;
+  }
+
+  .svg {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+
+    & > *:first-child {
+      position: absolute;
+      top: 25%;
+      left: 7%;
+      transform: translateY(-45%);
+    }
+
+    input {
+      padding-left: 35px !important;
+    }
+  }
+
+  .timePicker {
+    width: 160px !important;
+  }
+
+  .toggleRow {
+    font: normal normal bold 16px/24px Heebo;
+    display: flex;
+    flex-direction: row;
+
+    span {
+      margin-right: 25px;
+    }
+
+    button {
+      width: 35px;
+      align-items: flex-start !important;
+    }
+  }
+
+  .day {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    min-height: 48px;
+    margin-bottom: 10px;
+
+    .dayInner {
+      position: relative;
+      width: 100%;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .selectedTime {
+        position: absolute;
+        left: 35%;
+        top: 12%;
+        display: flex;
+        flex-direction: row;
+        gap: 22px;
+      }
+    }
+
+    .time {
+      margin: 15px 0px;
+      padding-inline: 0px;
+      display: grid;
+
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+
+      grid-template-areas: 'icon finish start';
+
+      .icon {
+        margin-top: 15px;
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+.footerStyles {
+  width: 100%;
+  align-self: center;
+}

@@ -1,0 +1,72 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  img {
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  & > div {
+    padding-inline: 60px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+
+    & > svg {
+      margin-left: auto;
+    }
+    & > span:nth-child(2) {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: auto;
+      padding-bottom: 20px;
+    }
+    & > div:nth-child(3) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      input {
+        text-align: right;
+      }
+    }
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-inline: auto;
+      border: 1px solid #434343;
+
+      margin-top: auto;
+      margin-bottom: 20px;
+
+      height: 45px;
+
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+}
+.grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+
+  grid-template-areas:
+    'client_second_name client_first_name'
+    'client_email client_email'
+    'client_phone client_phone';
+  width: 100%;
+}

@@ -1,0 +1,33 @@
+@import '../styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  nav {
+    ul {
+      padding: 0;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  color: $gray-900;
+
+  text-decoration: none;
+  padding-block: 8px;
+  padding-inline: 10px;
+
+  gap: 8px;
+
+  &:hover {
+    color: $gray-900;
+  }
+}
+.active {
+  border: 1px solid $primary;
+  border-left: none;
+  background: #fcfcfc;
+}

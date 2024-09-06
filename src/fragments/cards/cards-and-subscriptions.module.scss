@@ -1,0 +1,92 @@
+@import '../styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $gray-200;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #1384e629;
+      border-radius: 20px;
+      font: normal normal normal 20px/29px Heebo;
+
+      outline: none;
+      border: 0;
+
+      user-select: none;
+
+      max-height: 55px;
+      width: 140px;
+      padding: 15px;
+    }
+
+    padding: 10px;
+
+    div {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .noContentInfo {
+    width: 381px;
+    text-align: right;
+  }
+
+  .createButton {
+    width: 172px;
+    height: 52px;
+    background: #1385E61C 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    font: normal normal normal 16px/24px Heebo;
+  }
+
+  .cardsWrapper {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    min-width: 350px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 84px 45px;
+  }
+}
+@media (max-width: 768px) {
+  .cardsWrapper {
+    display: flex !important;
+    flex-direction: column-reverse !important; // Reverse the order for smaller screens
+    overflow-x: auto !important;
+  }
+
+}

@@ -1,0 +1,38 @@
+@import '../styles/variables';
+@import '../styles/typography.module';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  user-select: none;
+
+  label {
+    display: flex;
+    align-self: flex-end;
+    gap: 2px;
+
+    color: $gray-500;
+    font-size: 13px;
+    font-weight: 300;
+
+    &.required {
+      &:after {
+        content: '*';
+        display: block;
+        color: $danger;
+        font-size: 0.725rem;
+      }
+    }
+  }
+
+  .note {
+    @extend .footnote;
+    color: $gray-500;
+  }
+
+  .error {
+    @extend .footnote;
+    color: $danger;
+  }
+}

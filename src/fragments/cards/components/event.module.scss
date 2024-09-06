@@ -1,0 +1,59 @@
+.wrapper {
+  width: 324px !important;
+  height: 361px !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 37px 38px 47px 38px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 9px;
+  text-align: right;
+  margin-left: 36px;
+  font: normal normal normal 16px/24px Heebo;
+
+  .title {
+    text-align: center;
+    font: normal normal bold 20px/29px Heebo;
+  }
+
+  .price {
+    text-align: center;
+    font: normal normal bold 29px/42px Heebo;
+  }
+
+  .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .separatorLine {
+    height: 0px;
+    width: 100%;
+    border: 0.5px solid #E6E6E6;
+    background: #E6E6E6;
+    margin: 0 16px;
+  }
+
+  .edit {
+    position: absolute;
+    left: 45px;
+    bottom: 65px;
+  }
+
+  .delete {
+    position: absolute;
+    left: 70px;
+    bottom: 65px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+   margin:10px 0px // Reverse the order for smaller screens
+  }
+
+}

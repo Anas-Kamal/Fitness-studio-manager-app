@@ -1,0 +1,54 @@
+@import '../styles/variables';
+@import '../styles/typography.module';
+
+.wrapper {
+  min-width: 280px;
+  width: 100%;
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  background: $white;
+  border: 1px dashed $gray-200;
+  border-radius: 12px;
+
+  user-select: none;
+  transition: background-color 0.1s ease-in;
+
+  cursor: pointer;
+
+  &:hover,
+  &.isActive {
+    background: $gray-50;
+  }
+
+  & > svg {
+    color: $gray-400;
+    margin-bottom: 14px;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .label {
+    @extend .action;
+    color: $gray-900;
+    font-weight: 500;
+
+    & > span {
+      color: $primary;
+    }
+  }
+
+  .helper {
+    @extend .caption;
+    color: $gray-400;
+    font-weight: 500;
+  }
+}

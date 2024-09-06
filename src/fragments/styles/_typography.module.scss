@@ -1,0 +1,146 @@
+$font-size-base: 1rem;
+
+$spacing-sm: -0.01em;
+$spacing-md: 0.04em;
+$spacing-lg: 0.08em;
+
+$base-font: Inter, -apple-system-body, sans-serif;
+$aeonik-font: Aeonik, -apple-system-body, sans-serif;
+
+.typography {
+  font-weight: normal;
+  font-family: $base-font;
+
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong, b {
+    font-weight: 700;
+  }
+}
+
+.x3 {
+  @extend .typography;
+
+  font-family: $aeonik-font;
+  font-size: $font-size-base * 4;
+  line-height: 1.12;
+  letter-spacing: $spacing-sm;
+}
+
+.x2 {
+  @extend .typography;
+
+  font-family: $aeonik-font;
+  font-size: $font-size-base * 3.5;
+  line-height: 1.14;
+  letter-spacing: $spacing-sm;
+}
+
+.x1 {
+  @extend .typography;
+
+  font-family: $aeonik-font;
+  font-size: $font-size-base * 3;
+  line-height: 1.17;
+  letter-spacing: $spacing-sm;
+}
+
+.large {
+  @extend .typography;
+
+  font-family: $aeonik-font;
+  font-size: $font-size-base * 2.5;
+  line-height: 1.2;
+  letter-spacing: $spacing-sm;
+}
+
+.normal {
+  @extend .typography;
+
+  font-family: $aeonik-font;
+  font-size: $font-size-base * 2;
+  line-height: 1.25;
+  letter-spacing: $spacing-sm;
+}
+
+.small {
+  @extend .typography;
+
+  font-family: $aeonik-font;
+  font-size: $font-size-base * 1.5;
+  line-height: 1.33;
+  letter-spacing: $spacing-sm;
+}
+
+.headline {
+  @extend .typography;
+
+  font-family: $aeonik-font;
+  font-size: $font-size-base * 1.125;
+  line-height: 1.33;
+  letter-spacing: $spacing-sm;
+}
+
+.headline-capital {
+  @extend .typography;
+
+  font-family: $aeonik-font;
+  font-size: $font-size-base * 0.875;
+  line-height: 1.71;
+  font-weight: 700;
+  letter-spacing: $spacing-lg;
+  text-transform: uppercase;
+}
+
+.body {
+  @extend .typography;
+
+  font-size: $font-size-base;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: $spacing-sm;
+}
+
+.small-body {
+  @extend .typography;
+
+  font-size: $font-size-base * 0.875;
+  line-height: 1.71;
+  font-weight: 400;
+  letter-spacing: $spacing-sm;
+}
+
+.action {
+  @extend .typography;
+
+  font-size: $font-size-base * 0.875;
+  line-height: 1.71;
+  letter-spacing: $spacing-sm;
+}
+
+.caption {
+  @extend .typography;
+
+  font-size: $font-size-base * 0.75;
+  line-height: 1.67;
+  letter-spacing: $spacing-sm;
+}
+
+.footnote {
+  @extend .typography;
+
+  font-size: $font-size-base * 0.75;
+  line-height: 1.67;
+  font-weight: 400;
+  letter-spacing: $spacing-sm;
+}

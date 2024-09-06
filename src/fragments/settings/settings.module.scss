@@ -1,0 +1,120 @@
+@import '../styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  .toggle {
+    gap: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    font: normal normal bold 13px/19px Heebo;
+    position: relative;
+
+    button {
+      width: 40px;
+    }
+  }
+  header {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $gray-200;
+    padding: 20px;
+    // div {
+    //   display: flex;
+    //   gap: 15px;
+
+    //   button {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+
+    //     background-color: #1384e629;
+
+    //     outline: none;
+    //     border: 0;
+
+    //     user-select: none;
+
+    //     max-height: 55px;
+    //     width: 140px;
+    //     padding: 15px;
+    //   }
+    // }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .tableHeader {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      flex-direction: column;
+
+      padding-block: 25px;
+      padding-inline: 50px;
+      & > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+      & > span:nth-child(2) {
+        button {
+          outline: none;
+          background-color: white;
+          border: 0;
+        }
+      }
+      .active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.integrations{
+  width: 50%;
+}
+.profileView{
+  width: 50%;
+}
+.sellerForm{
+  width: 50% !important;
+
+}
+@media (max-width: 1072px) {
+  .sellerForm {
+    width: 80% !important;
+  }
+  .integrations{
+    width: 100%;
+  }
+  .profileView{
+    width: 100%;
+  }
+  
+}
+@media (max-width: 1339px) {
+  .integrations{
+    width: 100%;
+  }
+  .profileView{
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .sellerForm {
+    width: 100% !important;
+  }
+  .integrations{
+    width: 100%;
+  }
+  .profileView{
+    width: 100%;
+  }
+}

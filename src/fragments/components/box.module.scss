@@ -1,0 +1,29 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+
+  min-height: 325px;
+  max-width: 275px;
+
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.blue {
+  background-color: rgba(19, 133, 230, 0.1);
+}
+
+.purple {
+  background-color: #eae3ff;
+}
+.gray {
+  background-color: #fafafa;
+}
+
+.lightPurple {
+  background-color: #f8f5ff;
+}

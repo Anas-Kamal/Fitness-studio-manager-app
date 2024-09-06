@@ -1,0 +1,112 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  img {
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  & > div {
+    padding-inline: 60px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+
+    & > svg {
+      margin-left: auto;
+    }
+    & > span:nth-child(2) {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: auto;
+      padding-bottom: 20px;
+    }
+    input {
+      text-align: right;
+    }
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-inline: auto;
+      border: 1px solid #434343;
+
+      margin-top: auto;
+      margin-bottom: 20px;
+
+      height: 45px;
+
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+
+  grid-template-areas:
+    '. card_full_name'
+    '. card_verification_id'
+    'card_creds card_number';
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+.bottomButton {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.cardCreds {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 20px;
+  & > div {
+    input {
+      text-align: center !important;
+      width: 100%;
+
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70px;
+    margin-right: 20px;
+  }
+}
+
+.btnBlock {
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  justify-content: space-between;
+  button {
+    width: 170px;
+  }
+}

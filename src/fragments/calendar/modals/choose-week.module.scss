@@ -1,0 +1,21 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  margin-inline: auto;
+  padding-inline: 20px 45px 35px 0 !important;
+
+  .weekPicker {
+    .react-datepicker {
+      display: block !important;
+      width: 313px !important;
+      height: 400px !important;
+    }
+    background: #ggg;
+  }
+}

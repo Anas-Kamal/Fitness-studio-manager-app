@@ -1,0 +1,147 @@
+@import '../../styles/variables';
+@import '../../styles/typography.module';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  max-width: 600px;
+
+  margin-inline: auto;
+  padding-inline: 20px !important;
+
+  &>div>div {
+    width: 100%;
+  }
+
+  &>div:last-child {
+    gap: 40px;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: none;
+  }
+
+  input[type='checkbox']::-webkit-calendar-picker-indicator {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  input {
+    outline: none;
+    text-align: center;
+    font-size: 14px !important;
+  }
+
+  .svg {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+
+    &>*:first-child {
+      position: absolute;
+      top: 50%;
+      left: 7%;
+      transform: translateY(-50%);
+      z-index: 5;
+    }
+
+    input {
+      padding-left: 35px !important;
+    }
+  }
+
+  .extend {
+    width: 312px;
+  }
+
+  .normal {
+    input {
+      width: 163px;
+      border-radius: 3px;
+      height: 45px;
+      padding: 5px;
+    }
+  }
+
+  .subscriptionRow {
+    display: grid;
+
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 24px;
+    grid-row-gap: 8px;
+
+    grid-template-areas:
+      'period name'
+    ;
+  }
+  .subscriptionLimit {
+    display: grid;
+
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 24px;
+
+    grid-template-areas:
+      'limit_frame limit_times limit'
+    ;
+  }
+
+  .toggle {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    font: normal normal bold 13px/19px Heebo;
+    position: relative;
+    margin: 35px 0 8px 0;
+    button {
+      width: 40px;
+    }
+  }
+
+  .subscriptionDescription {
+    margin-top: 14px;
+    margin-bottom: 30px;
+  }
+
+  .subscriptionFooter {
+    margin-top: 41px;
+    margin-bottom: 40px;
+    display: grid;
+
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 24px;
+    grid-row-gap: 8px;
+
+    grid-template-areas:
+      'button price'
+    ;
+
+    button {
+      margin-top: 21px;
+      width: 100%;
+      height: 45px;
+      color: #fff;
+      background: #241F1F 0% 0% no-repeat padding-box;
+      border-radius: 4px;
+      font: normal normal normal 15px/22px Heebo;
+    }
+  }
+}

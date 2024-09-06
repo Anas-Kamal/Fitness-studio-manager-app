@@ -1,0 +1,128 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  & > img {
+    width: 30%;
+    min-height: 100vh;
+    object-fit: cover;
+  }
+
+  & > div {
+    padding-inline: 60px;
+    margin-left: auto;
+    display: flex;
+
+    flex-direction: column;
+
+    width: 70%;
+
+    & > svg {
+      margin-left: auto;
+    }
+    & > span:nth-child(2) {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: auto;
+      padding-bottom: 20px;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-inline: auto;
+
+      border: 1px solid #434343;
+
+      margin-block: 20px;
+
+      height: 45px;
+
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 350px;
+
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+
+  grid-template-areas:
+    '. logo'
+    'cover main';
+  width: 100%;
+
+  svg {
+    cursor: pointer;
+  }
+
+  .coverBlock {
+    display: grid !important;
+    grid-template-columns: repeat(3, 170px);
+    grid-template-rows: repeat(auto, 20px);
+
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    & > div {
+      position: relative;
+
+      svg {
+        position: absolute;
+        bottom: 0px;
+      }
+    }
+  }
+  .gap {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e6e6e6;
+  }
+  .logo {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+
+    & > img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    & > div {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+
+      svg {
+        position: absolute;
+        bottom: -10px;
+        left: -10%;
+      }
+    }
+  }
+  .main {
+    & > div {
+      position: relative;
+
+      svg {
+        position: absolute;
+        bottom: 5px;
+        right: 2%;
+      }
+    }
+  }
+}

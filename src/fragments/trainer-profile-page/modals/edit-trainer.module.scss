@@ -1,0 +1,23 @@
+.wrapper {
+  max-width: 550px;
+
+  padding-inline: 0px;
+  display: grid;
+  //   width: 100%;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+
+  grid-template-areas:
+    'name name'
+    'email phone'
+    'sex birthday_date'
+    'type_of_trainings type_of_trainings';
+}
+
+.footerStyles {
+  max-width: 460px;
+}

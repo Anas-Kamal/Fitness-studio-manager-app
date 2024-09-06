@@ -1,0 +1,167 @@
+@import '../../styles/variables';
+@import '../../styles/typography.module';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  max-width: 600px;
+
+  margin-inline: auto;
+  padding-inline: 20px !important;
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: none;
+  }
+
+  input {
+    direction: rtl;
+    outline: none;
+    text-align: center;
+    font-size: 14px !important;
+  }
+
+  .svg {
+    display: flex;
+    position: relative;
+
+    & > *:first-child {
+      position: absolute;
+      top: 50%;
+      left: 7%;
+      transform: translateY(-45%);
+    }
+
+    input {
+      padding-left: 35px !important;
+    }
+  }
+
+  .modalHeader {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > span:first-child {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+      color: $gray-900;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    & > span:last-child {
+      font-size: 13px;
+      opacity: 0.7;
+      color: $gray-900;
+      margin-bottom: 30px;
+      width: 84.2%;
+    }
+  }
+
+  .header {
+    padding-bottom: 10px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+
+    grid-template-areas: 'isGroup isPrivate';
+    width: 100%;
+  }
+
+  .extend {
+    input {
+      width: 240px;
+      border-radius: 3px;
+      height: 45px;
+      padding: 5px;
+    }
+
+    button {
+      width: 240px;
+      border-radius: 3px;
+      height: 45px;
+      padding: 5px;
+    }
+  }
+
+  .small {
+    input {
+      width: 164px;
+      border-radius: 3px;
+      height: 45px;
+      padding: 5px;
+    }
+
+    button {
+      width: 176px;
+      border-radius: 3px;
+      height: 45px;
+      padding: 5px;
+    }
+  }
+
+  .groupBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .dataPicker {
+      width: 176px;
+      input {
+        width: 180px;
+      }
+    }
+  }
+
+  .groupFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 16px;
+
+    width: 100%;
+
+    .editButton {
+      align-self: flex-end;
+      width: 164px;
+      height: 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #ffff;
+      font: normal normal normal 17px/25px Heebo;
+    }
+
+    .participantsText {
+      align-self: flex-end;
+      margin-bottom: 10px;
+      max-width: 225px;
+      text-align: right;
+      color: #797878;
+      font: normal normal normal 10px/14px Heebo;
+    }
+
+    .participantsNumber {
+      width: 176px;
+      input {
+        width: 176px;
+      }
+    }
+  }
+}

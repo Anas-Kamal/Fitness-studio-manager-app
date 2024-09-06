@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'typography.module';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: Inter, -apple-system-body, sans-serif;
+  font-weight: normal;
+  min-height: 100% !important;
+  height: 100%;
+}
+
+.pac-container {
+  z-index: 10500;
+}

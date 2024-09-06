@@ -1,0 +1,70 @@
+@import '../styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 275px;
+  border-right: 1px solid $primary;
+  padding-inline: 30px;
+  padding-top: 20px;
+
+  & > span:nth-child(1) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+}
+.hidden {
+  display: none !important;
+}
+.notificationWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-block: 10px;
+
+  & > div:first-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
+
+      & > span:nth-child(2) {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 10px;
+        letter-spacing: 0px;
+        color: #606060;
+        opacity: 0.5;
+      }
+    }
+
+    // ;
+  }
+
+  .btns {
+    padding: 5px;
+    justify-content: flex-end;
+    display: flex;
+    gap: 10px;
+
+    button {
+      padding: 4px;
+      border-radius: 4px;
+      outline: none !important;
+      min-width: 75px;
+    }
+
+    & > button:nth-child(1) {
+      color: #f87fa0;
+      background-color: #fcdbdb;
+      border: 1px solid#FF96AF;
+    }
+  }
+}

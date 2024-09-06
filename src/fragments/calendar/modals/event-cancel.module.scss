@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+@import '../../styles/typography.module';
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .eventText {
+      text-align: right;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    .spacerLine {
+      width: 100%;
+      align-self: center;
+      height: 0;
+      border: 0.5px solid #70707038;
+      margin-bottom: 20px;
+    }
+  }
+  .recurring {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 11px;
+    margin-bottom: 25px;
+
+    div {
+      border: 1px solid $primary;
+      border-radius: 4px;
+      font-size: 13px;
+      color: $gray-500;
+      font-weight: 300;
+
+      & > div {
+        padding: 12px;
+
+        display: flex;
+        flex-direction: column;
+
+        // input div
+        & > div {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+
+          input {
+            border: 1px solid $primary;
+            cursor: pointer;
+          }
+
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            color: $gray-900 !important;
+          }
+        }
+      }
+    }
+  }
+}

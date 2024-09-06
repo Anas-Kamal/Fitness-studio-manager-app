@@ -1,0 +1,7 @@
+@import '../styles/variables';
+
+.wrapper {
+  user-select: none;
+  padding: 16px 0;
+  color: $danger;
+}

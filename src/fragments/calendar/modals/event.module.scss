@@ -1,0 +1,282 @@
+@import '../../styles/variables';
+@import '../../styles/typography.module';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  max-width: 600px;
+
+  margin-inline: auto;
+  padding-inline: 20px !important;
+
+  & > div > div {
+    width: 100%;
+  }
+
+  & > div:last-child {
+    gap: 40px;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: none;
+  }
+
+  input[type='checkbox']::-webkit-calendar-picker-indicator {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  input {
+    outline: none;
+    text-align: center;
+    font-size: 14px !important;
+  }
+
+  .svg {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+
+    & > *:first-child {
+      position: absolute;
+      top: 50%;
+      left: 7%;
+      transform: translateY(-45%);
+      z-index: 5;
+    }
+
+    input {
+      padding-left: 35px !important;
+    }
+  }
+
+  .modalHeader {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > span:first-child {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+      color: $gray-900;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    & > span:last-child {
+      font-size: 13px;
+      opacity: 0.7;
+      color: $gray-900;
+      margin-bottom: 30px;
+      width: 84.2%;
+    }
+  }
+
+  .header {
+    padding-bottom: 10px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+
+    grid-template-areas: 'isPrivate isGroup';
+    width: 100%;
+
+    // Checbox styles
+    & > div {
+      border: 1px solid $primary;
+      border-radius: 4px;
+      font-size: 13px;
+      color: $gray-500;
+      font-weight: 300;
+
+      & > div {
+        padding: 12px;
+
+        display: flex;
+        flex-direction: column;
+
+        // input div
+        & > div {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+
+          input {
+            border: 1px solid $primary;
+            cursor: pointer;
+          }
+
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            color: $gray-900 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .extend {
+    input {
+      width: 240px;
+      border-radius: 3px;
+      height: 45px;
+      padding: 5px;
+    }
+  }
+
+  .small {
+    input {
+      // width: 140px;
+      border-radius: 3px;
+      height: 45px;
+      padding: 5px;
+    }
+  }
+
+  .groupHeader {
+    width: 100%;
+    display: grid;
+    padding-bottom: 10px;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+
+    grid-template-areas:
+      'instructor name_of_trainings'
+      'type_of_studying room';
+  }
+
+  .groupBody {
+    display: grid;
+
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 24px;
+    grid-row-gap: 18px;
+
+    grid-template-areas:
+      'date finish start'
+      'number_of_partipiciants date_of_end weekly_repeat'
+      'separator separator separator'
+      'price card_payment .';
+
+    .separator {
+      width: 100%;
+      height: 1px;
+      background-color: $primary;
+    }
+
+    .weeakly {
+      width: 100%;
+      gap: 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      margin-block: auto;
+      position: relative;
+      top: 10px;
+
+      span {
+        width: 100%;
+      }
+    }
+  }
+
+  .groupFooter {
+    padding-inline: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+
+    .cardInput {
+      width: 340px;
+    }
+  }
+
+  // Private section
+
+  .checkbox {
+    position: relative;
+    width: 22px;
+    height: 22px;
+  }
+
+  .justify {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .roomSelector {
+      width: 176px;
+    }
+  }
+
+  .privateHeader {
+    display: grid;
+
+    width: 100%;
+    margin-bottom: 18px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 24px;
+    grid-row-gap: 18px;
+
+    grid-template-areas: 'private_name_of_trainings private_instructor';
+  }
+
+  .privateBody {
+    display: grid;
+
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    justify-items: center;
+
+    grid-column-gap: 24px;
+    grid-row-gap: 18px;
+
+    grid-template-areas: 'finish start date';
+  }
+
+  .privateFooter {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+}
