@@ -1,6 +1,6 @@
-# Bounce Studio - Gym Management Panel
+# Fitness Studio Manager - Gym Management Panel
 
-**Bounce Studio** is a gym management platform designed to help studios and trainees manage their fitness sessions effectively. Studios can manage trainees and their training schedules, while trainees can sign up, schedule sessions, and handle payments seamlessly.
+**Fitness Studio Manager** is a gym management platform designed to help studios and trainees manage their fitness sessions effectively. Studios can manage trainees and their training schedules, while trainees can sign up, schedule sessions, and handle payments seamlessly.
 
 ## Features
 
